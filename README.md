@@ -3,6 +3,17 @@
 A simple, focused OpenAI-compatible API gateway for Claude Code with streaming support.
 Leverage the Claude Code SDK use mode. Don't hack the token credentials.
 
+## 🚀 Available Implementations
+
+This project is available in **two implementations** with identical functionality:
+
+- **Python (FastAPI)** - The original implementation using FastAPI and asyncio
+- **TypeScript (Express)** - A TypeScript port using Express.js and Node.js
+
+Choose the one that fits your stack! Both provide the same OpenAI-compatible API.
+
+📖 [TypeScript Implementation Guide](README-TypeScript.md)
+
 ## Getting Started
 
 Use the Makefile to install the project or pip/uv.
@@ -31,6 +42,24 @@ make install
 # Start the API server
 make start
 ```
+
+### TypeScript Implementation
+```bash
+# Clone and setup
+git clone https://github.com/codingworkflow/claude-code-api
+cd claude-code-api
+
+# Install dependencies
+make install-ts
+
+# Build TypeScript code
+make build-ts
+
+# Start the API server
+make start-ts-dev
+```
+
+For detailed TypeScript documentation, see [README-TypeScript.md](README-TypeScript.md)
 
 ## Limitations
 

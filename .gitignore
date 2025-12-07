@@ -329,3 +329,16 @@ docs/start.md
 docs/typescript-translation-plan.md
 
 # Note: test scripts in tests/ directory should be tracked in git
+
+# TypeScript / Node.js
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# TypeScript compiled files
+*.js.map
+*.d.ts.map

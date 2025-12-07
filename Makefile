@@ -21,6 +21,31 @@ clean:
 	find . -name "*.pyc" -delete
 	find . -name "__pycache__" -delete
 
+# TypeScript targets
+install-ts:
+	npm install
+
+build-ts:
+	npm run build
+
+start-ts:
+	npm start
+
+start-ts-dev:
+	npm run dev
+
+test-ts:
+	npm test
+
+lint-ts:
+	npm run lint
+
+format-ts:
+	npm run format
+
+clean-ts:
+	rm -rf dist node_modules
+
 kill:
 	@if [ -z "$(PORT)" ]; then \
 		echo "Error: PORT parameter is required. Usage: make kill PORT=8001"; \
@@ -50,13 +75,14 @@ help:
 	@echo "  make start-prod  - Start Python API server (production)"
 	@echo ""
 	@echo "TypeScript API:"
-	@echo "  make install-js     - Install TypeScript dependencies" 
-	@echo "  make test-js        - Run TypeScript unit tests"
-	@echo "  make test-js-real   - Run Python test suite against TypeScript API"
-	@echo "  make start-js       - Start TypeScript API server (production)"
-	@echo "  make start-js-dev   - Start TypeScript API server (development with reload)"
-	@echo "  make start-js-prod  - Build and start TypeScript API server (production)"
-	@echo "  make build-js       - Build TypeScript project"
+	@echo "  make install-ts     - Install TypeScript dependencies" 
+	@echo "  make build-ts       - Build TypeScript project"
+	@echo "  make start-ts       - Start TypeScript API server (production)"
+	@echo "  make start-ts-dev   - Start TypeScript API server (development with reload)"
+	@echo "  make test-ts        - Run TypeScript unit tests"
+	@echo "  make lint-ts        - Lint TypeScript code"
+	@echo "  make format-ts      - Format TypeScript code"
+	@echo "  make clean-ts       - Clean TypeScript build artifacts"
 	@echo ""
 	@echo "General:"
 	@echo "  make clean       - Clean up Python cache files"
